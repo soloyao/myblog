@@ -156,7 +156,86 @@
 							</div>
 							<div class="vedit">
 								<textarea id="veditor" class="veditor vinput" placeholder="记得留下你的昵称和邮箱....可以快速收到回复"></textarea>
-								<div class="vctrl"></div>
+							</div>
+							<div class="vcontrol">
+								<div class="text-right">
+									<button class="vsubmit vbtn">Reply</button>
+								</div>
+							</div>
+						</div>
+						<div class="vinfo" style="display:block;">
+							<div class="vcount">
+								<span class="vnum">267</span> Comments
+							</div>
+						</div>
+						<div class="vlist">
+							<div class="vcard">
+								<img class="vimg" src="/static/image/usericon.jpg">
+								<div class="vh">
+									<div class="vhead">
+										<span class="vnick">Dream</span>
+									</div>
+									<div class="vmeta">
+										<span class="vtime">2019-01-20 12:01</span>
+										<span class="vat">Reply</span>
+									</div>
+									<div class="vcontent">
+										<p>test</p>
+									</div>
+									<div class="vquote">
+										<div class="vcard">
+											<img class="vimg" src="/static/image/usericon.jpg">
+											<div class="vh">
+												<div class="vhead">
+													<span class="vnick">Dream</span>
+												</div>
+												<div class="vmeta">
+													<span class="vtime">2019-01-20 12:01</span>
+													<span class="vat">Reply</span>
+												</div>
+												<div class="vcontent">
+													<p>
+														<a class="at">@Dream</a>
+														 , 111
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="vcard">
+											<img class="vimg" src="/static/image/usericon.jpg">
+											<div class="vh">
+												<div class="vhead">
+													<span class="vnick">Dream</span>
+												</div>
+												<div class="vmeta">
+													<span class="vtime">2019-01-20 12:01</span>
+													<span class="vat">Reply</span>
+												</div>
+												<div class="vcontent">
+													<p>
+														<a class="at">@Dream</a>
+														 , 测试
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="vcard">
+								<img class="vimg" src="/static/image/usericon.jpg">
+								<div class="vh">
+									<div class="vhead">
+										<span class="vnick">Dream</span>
+									</div>
+									<div class="vmeta">
+										<span class="vtime">2019-01-20 12:01</span>
+										<span class="vat">Reply</span>
+									</div>
+									<div class="vcontent">
+										<p>test</p>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -166,6 +245,8 @@
 	</div>
 	<!-- 引入共有底部 -->
 	<div th:replace="footer :: footer"></div>
+	<!-- 引入回到顶部按钮 -->
+	<div th:replace="rightside :: rightside"></div>
 </div>
 <link rel="stylesheet" href="/static/css/article.css">
 <script src="/static/js/article.js"></script>
