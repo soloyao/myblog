@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:http="http://www.w3.org/1999/xhtml">
+<!-- 所有页面共有底部 -->
+<div th:fragment="header" class="header">
+	<span class="pull-left" id="blog-name">
+		<a class="blog-title" id="site-name" href="/index">DreamZ</a>
+	</span>
+	<span class="pull-right menus">
+		<div class="menus-items">
+			<div class="menus-item">
+				<a class="site-page" href="/index">
+					<i class="fa-fw fa fa-home"></i>
+					<span>首页</span>
+				</a>
+			</div>
+			<div class="menus-item">
+				<a class="site-page" href="/archives">
+					<i class="fa-fw fa fa-archive"></i>
+					<span>时间轴</span>
+				</a>
+			</div>
+			<div class="menus-item">
+				<a class="site-page" href="/tags">
+					<i class="fa-fw fa fa-tags"></i>
+					<span>标签</span>
+				</a>
+			</div>
+			<div class="menus-item">
+				<a class="site-page" href="/categories"
+					<i class="fa-fw fa fa-tags"></i>
+					<span>分类</span>
+				</a>
+			</div>
+			<!-- <div class="menus-item">
+				<a class="site-page" href="/link">
+					<i class="fa-fw fa fa-link"></i>
+					<span>友链</span>
+				</a>
+			</div> -->
+			<div class="menus-item">
+				<a class="site-page" href="/about">
+					<i class="fa-fw fa fa-heart"></i>
+					<span>关于</span>
+				</a>
+			</div>
+		</div>
+	</span>
+	<span class="pull-right" id="search-button">
+		<a class="site-page social-icon search">
+			<i class="fa fa-search fa-fw"></i>
+			<span>搜索</span>
+		</a>
+	</span>
+</div>
+</html>

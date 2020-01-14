@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh_CN" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+<meta charset="UTF-8">
+<title>文章</title>
+<link rel="stylesheet" href="/static/css/zui.css">
+<link rel="stylesheet" href="/static/css/footer.css">
+<link rel="stylesheet" href="/static/css/header.css">
+<link rel="stylesheet" href="/static/css/aside-info.css">
+<link rel="stylesheet" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/zui.js"></script>
+<script src="/static/js/vue.min.js"></script>
+<script src="/static/js/myzui.js"></script>
+<script src="/static/js/axios.min.js"></script>
+<script src="/static/js/heartclick.js"></script>
+<script src="/static/js/starback.js"></script>
+<script src="/static/js/cat.js"></script>
+<script src="/static/js/common.js"></script>
+</head>
+<body>
+<div id="app">
+	<!-- 引入共有头部 -->
+	<div th:replace="header ::header"></div>
+	<div id="body-wrap">
+		<main id="content-outer">
+			<div id="top-container" style="background-image:url(/static/image/article-bg1.jpg)">
+				<div id="article-info">
+					<div id="article-title">
+						<div class="articletitle">hexo-theme-butterfly安装文档</div>
+					</div>
+					<div id="article-meta">
+						<time class="article-meta-date">
+							<i class="fa fa-calendar fa-fw"></i> 发表于 2019-06-17<span class="article-meta-separator">|</span>
+							<i class="fa fa-history fa-fw"></i> 更新于 2020-01-04
+						</time>
+						<span class="article-meta-separator">|</span>
+						<span>
+							<i class="fa fa-inbox article-meta-icon fa-fw"></i>
+							<a class="article-meta-categories" href="/categories">Hexo</a>
+						</span>
+						<div class="article-meta-wordcount">
+							<i class="fa fa-file-word-o fa-fw"></i>
+							<span>字数总计:</span>
+							<span class="word-count">7k</span>
+							<span class="article-meta-separator">|</span>
+							<i class="fa fa-clock-o article-meta-icon fa-fw"></i>
+							<span>阅读时长: 28 分钟</span>
+							<div class="article-meta-pv-cv">
+								<span class="article-meta-separator">|</span>
+								<span>
+									<i class="fa fa-eye article-meta-icon fa-fw"></i>
+									 阅读量:
+								</span>
+								<span id="read-num">285113</span>
+								<span class="article-meta-separator">|</span>
+								<i class="fa fa-comments-o article-meta-icon fa-fw"></i>
+								<span>评论数:</span>
+								<a href="/article/#article-comment">
+									<span class="comment-count">263</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="layout layout-article" id="content-inner">
+				<article id="article">
+					<div class="article-container" id="article-content">
+						<h1>Title</h1>
+						<p>Content.</p>
+					</div>
+				</article>
+				<div class="article-copyright">
+					<div class="article-copyright-author">
+						<span class="article-copyright-meta">文章作者:</span>
+						<span class="article-copyright-info">
+							<a href="javascript:void(0)">DreamZ</a>
+						</span>
+					</div>
+					<div class="article-copyright-type">
+						<span class="article-copyright-meta">文章链接:</span>
+						<span class="article-copyright-info">
+							<a href="javascript:void(0)">http://127.0.0.1:8823/article</a>
+						</span>
+					</div>
+					<div class="article-copyright-notice">
+						<span class="article-copyright-meta">版权声明:</span>
+						<span class="article-copyright-info">
+							本博客所有文章除特别声明外，均採用 
+							<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+							 许可协议。转载请註明来自 
+							<a href="http://127.0.0.1:8823" target="_blank">DreamZ</a>
+						</span>
+					</div>
+				</div>
+				<div class="tag-share">
+					<div class="article-meta-tag-list">
+						<a class="article-meta-tags" href="/tags">Hexo</a>
+						<a class="article-meta-tags" href="/tags">主题</a>
+						<a class="article-meta-tags" href="/tags">教程</a>
+						<a class="article-meta-tags" href="/tags">butterfly</a>
+					</div>
+					<div class="article-share">
+						<div class="social-share share-component" data-sites="facebook,twitter,wechat,weibo,qq">
+						</div>
+						<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css">
+						<script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script>
+					</div>
+				</div>
+				<div class="article-reward">
+					<a class="reward-button">
+						<i class="fa fa-qrcode"></i>
+						打赏
+					</a>
+					<p>
+						<img src="/static/image/usericon.jpg">
+						<span class="desc-weixin">微信</span>
+						<img src="/static/image/article-bg1.jpg">
+						<span class="desc-alipay">支付宝</span>
+					</p>
+				</div>
+				<nav class="pagination-article" id="pagination">
+					<div class="prev-article pull-left">
+						<a href="/article/2">
+							<img class="prev-cover" src="/static/image/article-bg1.jpg">
+							<div class="labelarticle">上一篇</div>
+							<div class="prev-info">
+								<span>在浏览器输入 URL 回车之后发生了什么（超详细版）</span>
+							</div>
+						</a>
+					</div>
+					<div class="next-article pull-right">
+						<a href="/article/1">
+							<img class="next-cover" src="/static/image/article-bg2.jpg">
+							<div class="labelarticle">下一篇</div>
+							<div class="next-info">
+								<span>设置Windows电脑自动关机</span>
+							</div>
+						</a>
+					</div>
+				</nav>
+				<hr></hr>
+				<div id="article-comment">
+					<div class="comment-headling">
+						<i class="fa fa-comments fa-fw"></i>
+						<span>评论</span>
+					</div>
+					<div class="vcomment v" id="vcomment">
+						<div class="vwrap">
+							<div class="vheader item3">
+								<input name="nick" placeholder="NickName" class="vnick vinput" type="text">
+								<input name="mail" placeholder="E-Mail" class="vmail vinput" type="email">
+								<input name="link" placeholder="Website(http://)" class="vlink vinput" type="text">
+							</div>
+							<div class="vedit">
+								<textarea id="veditor" class="veditor vinput" placeholder="记得留下你的昵称和邮箱....可以快速收到回复"></textarea>
+								<div class="vctrl"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<!-- 引入共有底部 -->
+	<div th:replace="footer :: footer"></div>
+</div>
+<link rel="stylesheet" href="/static/css/article.css">
+<script src="/static/js/article.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh_CN" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+<meta charset="UTF-8">
+<title>归档</title>
+<link rel="stylesheet" href="/static/css/zui.css">
+<link rel="stylesheet" href="/static/css/footer.css">
+<link rel="stylesheet" href="/static/css/header.css">
+<link rel="stylesheet" href="/static/css/aside-info.css">
+<link rel="stylesheet" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/zui.js"></script>
+<script src="/static/js/vue.min.js"></script>
+<script src="/static/js/myzui.js"></script>
+<script src="/static/js/axios.min.js"></script>
+<script src="/static/js/heartclick.js"></script>
+<script src="/static/js/starback.js"></script>
+<script src="/static/js/cat.js"></script>
+<script src="/static/js/common.js"></script>
+</head>
+<body>
+<div id="app">
+	<!-- 引入共有头部 -->
+	<div th:replace="header :: header"></div>
+	<div style="padding-top:58px;">
+		<div class="row layout-page">
+			<div class="archives">
+				<div class="article-sort-title">文章总览 - 24</div>
+				<div class="article-sort">
+					<div class="article-sort-item year">2019</div>
+					<div class="article-sort-item">
+						<div class="article-sort-img">
+							<a class="article-sort-item-img" href="/article/1">
+								<img src="/static/image/article-bg1.jpg" alt="添加Windows Terminal到鼠标右键菜单">
+							</a>
+						</div>
+						<div class="article-sort-article">
+							<a class="article-sort-item-article" href="/article/1">
+								<i class="fa fa-clock-o"></i>
+								<time class="article-sort-item-time">2019-11-11</time>
+								<div class="article-sort-item-title">添加Windows Terminal到鼠标右键菜单</div>
+							</a>
+						</div>
+					</div>
+					<div class="article-sort-item">
+						<div class="article-sort-img">
+							<a class="article-sort-item-img" href="/article/2">
+								<img src="/static/image/article-bg2.jpg" alt="调研实现高性能动画">
+							</a>
+						</div>
+						<div class="article-sort-article">
+							<a class="article-sort-item-article" href="/article/2">
+								<i class="fa fa-clock-o"></i>
+								<time class="article-sort-item-time">2019-10-24</time>
+								<div class="article-sort-item-title">调研实现高性能动画</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="pagination">
+					<ul class="pager">
+					  <li class="previous"><a href="javascript:void(0)"><i class="fa fa-fw fa-chevron-left"></i></a></li>
+					  <li><a href="javascript:void(0)">1</a></li>
+					  <li class="active"><a href="javascript:void(0)">2</a></li>
+					  <li><a href="javascript:void(0)">3</a></li>
+					  <li><a href="javascript:void(0)">4</a></li>
+					  <li><a href="javascript:void(0)">5</a></li>
+					  <li class="next"><a href="javascript:void(0)"><i class="fa fa-fw fa-chevron-right"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<div th:replace="aside-info :: aside-info"></div>
+		</div>
+	</div>
+	<!-- 引入共有底部 -->
+	<div th:replace="footer :: footer"></div>
+</div>
+<link rel="stylesheet" href="/static/css/archives.css">
+<script src="/static/js/archives.js"></script>
+</body>
+</html>

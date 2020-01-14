@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh_CN" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+<meta charset="UTF-8">
+<title>标签</title>
+<link rel="stylesheet" href="/static/css/zui.css">
+<link rel="stylesheet" href="/static/css/footer.css">
+<link rel="stylesheet" href="/static/css/header.css">
+<link rel="stylesheet" href="/static/css/aside-info.css">
+<link rel="stylesheet" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/zui.js"></script>
+<script src="/static/js/vue.min.js"></script>
+<script src="/static/js/myzui.js"></script>
+<script src="/static/js/axios.min.js"></script>
+<script src="/static/js/heartclick.js"></script>
+<script src="/static/js/starback.js"></script>
+<script src="/static/js/cat.js"></script>
+<script src="/static/js/common.js"></script>
+</head>
+<body>
+<div id="app">
+	<!-- 引入共有头部 -->
+	<div th:replace="header :: header"></div>
+	<div style="padding-top:58px;">
+		<div class="row layout-page">
+			<div class="tags">
+				<div class="tags-title">
+					标签 -
+					<span class="tags-amount">28</span> 
+				</div>
+				<div class="tags-content">
+					<a href="/tags/9Patch" style="font-size:20px;color:#364f03;">9Patch</a>
+					<a href="/tags/Adapter" style="font-size:21px;color:#3a7747">Adapter</a>
+					<a href="/tags/Android/" style="font-size:23px;color:#865b26">Android</a>
+					<a href="/tags/Hexo/" style="font-size:29px;color:#799a8a">Hexo</a>
+					<a href="/tags/JS/" style="font-size:20px;color:#82aaba">JS</a>
+					<a href="/tags/Java/" style="font-size:25px;color:#57b421">Java</a>
+					<a href="/tags/Layout/" style="font-size:19px;color:#00542b">Layout</a>
+					<a href="/tags/ListView/" style="font-size:24px;color:#9614a4">ListView</a>
+					<a href="/tags/RecyclerView/" style="font-size:15px;color:#690902">RecyclerView</a>
+					<a href="/tags/UI/" style="font-size:20px;color:#9d2168">UI</a>
+					<a href="/tags/Visual-Studio-Code/" style="font-size:19px;color:#8d8e37">Visual Studio Code</a>
+					<a href="/tags/Windows/" style="font-size:28px;color:#c073b2">Windows</a>
+				</div>
+			</div>
+			<div th:replace="aside-info :: aside-info"></div>
+		</div>
+	</div>
+	<!-- 引入共有底部 -->
+	<div th:replace="footer :: footer"></div>
+</div>
+<link rel="stylesheet" href="/static/css/tags.css">
+<script src="/static/js/tags.js"></script>
+</body>
+</html>

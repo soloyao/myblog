@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:http="http://www.w3.org/1999/xhtml">
+<!-- 所有页面共有旁边信息栏 -->
+<div th:fragment="aside-info" style="width:25%;" id="aside-content">
+	<div class="card-widget card-info">
+					<div class="card-content">
+						<div class="card-info-avatar is-center">
+							<img class="avatar-img" src="/static/image/usericon.jpg">
+							<div class="author-info-name">DreamZ</div>
+							<div class="author-info-description">今日事,今日毕</div>
+						</div>
+						<div class="card-info-data">
+							<div class="card-info-data-item is-center">
+								<a href="/archives">
+									<div class="headline">文章</div>
+									<div class="length-num">24</div>
+								</a>
+							</div>
+							<div class="card-info-data-item is-center">
+								<a href="/tags">
+									<div class="headline">标签</div>
+									<div class="length-num">28</div>
+								</a>
+							</div>
+							<div class="card-info-data-item is-center">
+								<a href="/categories">
+									<div class="headline">分类</div>
+									<div class="length-num">10</div>
+								</a>
+							</div>
+						</div>
+						<div class="card-info-bookmark is-center">
+							<a class="bookmark" id="bookmark-it" href="javascript:void(0);" title="加入书签">
+								<i class="fa fa-bookmark"></i>
+								<span>加入书签</span>
+							</a>
+						</div>
+						<div class="card-info-social-icons is-center">
+							<a class="social-icon" href="javascript:void(0);">
+								<i class="fa fa-github"></i>
+							</a>
+							<a class="social-icon" href="javascript:void(0);">
+								<i class="fa fa-envelope"></i>
+							</a>
+							<a class="social-icon" href="javascript:void(0);">
+								<i class="fa fa-weibo"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="card-widget card-announcement">
+					<div class="card-content">
+						<div class="item-headline">
+							<i class="fa fa-bullhorn card-announcement-animation"></i>
+							<span>公告</span>
+						</div>
+						<div class="announcement-content">来了，就不要急着走...</div>
+					</div>
+				</div>
+				<div class="card-widget card-recent-article">
+					<div class="card-content">
+						<div class="item-headline">
+							<i class="fa fa-history"></i>
+							<span>最新文章</span>
+						</div>
+						<div class="aside-recent-item">
+							<div class="aside-recent-article">
+								<a href="/article/001">
+									<div class="aside-article-cover">
+										<img class="aside-article-bg" src="/static/image/article-bg2.jpg">
+									</div>
+									<div class="aside-article-title">
+										<div class="aside-article_title" href="/article/001" title="添加Windows Terminal到鼠标右键菜单">添加Windows Terminal到鼠标右键菜单</div>
+										<time class="aside-article-meta aside-article-meta-date">2019-11-11</time>
+									</div>
+								</a>
+							</div>
+							<div class="aside-recent-article">
+								<a href="/article/002">
+									<div class="aside-article-cover">
+										<img class="aside-article-bg" src="/static/image/article-bg1.jpg">
+									</div>
+									<div class="aside-article-title">
+										<div class="aside-article_title" href="/article/002" title="hexo-theme-butterfly安装文档">hexo-theme-butterfly安装文档</div>
+										<time class="aside-article-meta aside-article-meta-date">2019-06-01</time>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card-widget card-categories">
+					<div class="card-content">
+						<div class="item-headline">
+							<i class="fa fa-folder-open"></i>
+							<span>分类</span>
+						</div>
+						<ul class="aside-category-item">
+							<li class="aside-category-list">
+								<a class="aside-category-list-link" href="/categories/Android">
+									<span class="aside-category-list-name">Android</span>
+									<span class="aside-category-list-length">9</span>
+								</a>
+							</li>
+							<li class="aside-category-list">
+								<a class="aside-category-list-link" href="/categories/Android">
+									<span class="aside-category-list-name">教程</span>
+									<span class="aside-category-list-length">50</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="card-widget card-tags">
+					<div class="card-content">
+						<div class="item-headline">
+							<i class="fa fa-tags"></i>
+							<span>标签</span>
+						</div>
+						<div class="card-tag-cloud">
+							<a href="/tags/9Patch" style="font-size:16px;color:#999;">9Patch</a>
+							<a href="/tags/Adapter" style="font-size:16px;color:#999;">Adapter</a>
+							<a href="/tags/Android" style="font-size:24px;color:#99a9bf;">Android</a>
+						</div>
+					</div>
+				</div>
+				<div class="card-widget card-archives">
+					<div class="card-content">
+						<div class="item-headline">
+							<i class="fa fa-archive"></i>
+							<span>归档</span>
+						</div>
+						<ul class="archive-list">
+							<li class="archive-list-item">
+								<a class="archive-list-link" href="/archives/2019/11">
+									<span class="archive-list-date">2019年11月</span>
+									<span class="archive-list-count">1</span>
+								</a>
+							</li>
+							<li class="archive-list-item">
+								<a class="archive-list-link" href="/archives/2019/11">
+									<span class="archive-list-date">2019年10月</span>
+									<span class="archive-list-count">20</span>
+								</a>
+							</li>
+							<li class="archive-list-item">
+								<a class="archive-list-link" href="/archives/2019/11">
+									<span class="archive-list-date">2019年9月</span>
+									<span class="archive-list-count">10</span>
+								</a>
+							</li>
+							<li class="archive-list-item not">
+								<a class="archive-list-link-more" href="/archives">查看更多</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="card-widget card-webinfo">
+					<div class="card-content">
+						<div class="item-headline">
+							<i class="fa fa-line-chart"></i>
+							<span>网站资讯</span>
+						</div>
+						<div class="webinfo">
+							<div class="webinfo-item">
+								<div class="webinfo-article-name">文章数目 :</div>
+								<div class="webinfo-article-count">24</div>
+							</div>
+							<div class="webinfo-item">
+								<div class="webinfo-runtime-name">已运行时间 :</div>
+								<div class="webinfo-runtime-count" id="webinfo-runtime-count" start-date="2018/6/7 00:00:00">582 天</div>
+							</div>
+							<div class="webinfo-item">
+								<div class="webinfo-site-uv-name">本站访客数 :</div>
+								<div class="webinfo-site-uv-count" id="webinfo-visitor-count">25073</div>
+							</div>
+							<div class="webinfo-item">
+								<div class="webinfo-site-name">本站总访问量 :</div>
+								<div class="webinfo-site-pv-count" id="webinfo-all-visitor-count">382551</div>
+							</div>
+						</div>
+					</div>
+				</div>
+</div>
+</html>

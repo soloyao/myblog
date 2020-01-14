@@ -1,0 +1,98 @@
+body{
+	position: relative;
+    min-height: 100%;
+    overflow-x:hidden;
+    background: #fff;
+    color: #4c4948;
+    font-size: 14px;
+    font-family: Lato,Helvetica Neue For Number,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,"Microsoft JhengHei","MicrMicrosoft YaHei",Helvetica Neue,Helvetica,Arial,sans-serif;
+    line-height: 2;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: #49b1f5;
+}
+a{
+	color: #99a9bf;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    -ms-transition: all .2s;
+    transition: all .2s;
+}
+*{
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.layout-page{
+	display:flex;width:1200px;-webkit-box-align:start;align-items:flex-start;max-width:1200px;margin:0px auto;padding:0px 15px;
+}
+.category-content{
+	margin-top:20px;
+	width:75%;
+	box-shadow:rgba(7, 17, 27, 0.06) 0px 4px 8px 6px;
+	border-radius:8px;
+	background:white;
+	transition:all .3s;
+	padding:40px 44px 44px;
+}
+.categories:hover{
+	box-shadow:0px 4px 12px 12px rgba(7, 17, 27, .15);
+}
+.category-lists{
+	padding:20px 0px 30px;
+}
+.category-title{
+	text-align:center;
+	font-size:36px;
+}
+.category-content ul{
+	margin-top:8px;
+	padding:0px 0px 0px 16px;
+	list-style:none;
+}
+.category-content ul li{
+	position:relative;
+	margin:6px 0px;
+	padding:2px 10px 2px 30px !important;
+	-webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+.category-content ul li:hover:before{
+	border-color:#ff7242;
+}
+.category-content ul li:before{
+	position:absolute;
+	left:0px;
+	top:10px;
+	margin-left:9px;
+	width:12px;
+	height:12px;
+	content:"";
+	line-height:12px;
+	border:3px solid rgb(73, 177, 245);
+	border-radius:6px;
+	background:white;
+}
+.category-list a{
+	color:rgb(76, 73, 72);
+	cursor:pointer;
+	text-decoration:none;
+}
+.category-list .category-list-count{
+	margin-left:8px;
+	color:rgb(153,169,191);
+}
+.category-list-count:before{
+	content:"(";
+}
+.category-list-count:after{
+	content:")";
+}

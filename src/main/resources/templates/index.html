@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh_CN" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+<meta charset="UTF-8">
+<title>博客主页</title>
+<link rel="stylesheet" href="/static/css/zui.css">
+<link rel="stylesheet" href="/static/css/footer.css">
+<link rel="stylesheet" href="/static/css/header.css">
+<link rel="stylesheet" href="/static/css/aside-info.css">
+<link rel="stylesheet" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/zui.js"></script>
+<script src="/static/js/vue.min.js"></script>
+<script src="/static/js/myzui.js"></script>
+<script src="/static/js/axios.min.js"></script>
+<script src="/static/js/heartclick.js"></script>
+<script src="/static/js/starback.js"></script>
+<script src="/static/js/cat.js"></script>
+<script src="/static/js/common.js"></script>
+</head>
+<body>
+<div id="app">
+	<!-- 引入共有头部 -->
+	<div th:replace="header :: header"></div>
+	<div style="padding-top:58px;">
+		<div class="row layout-page">
+			<div class="recent-article" style="width:75%;">
+				<div class="recent-article-item">
+					<div class="recent-article-cover left-radius">
+						<a href="/index" title="hexo-theme-butterfly安裝文檔">
+							<img class="article-bg" src="/static/image/article-bg1.jpg">
+						</a>
+					</div>
+					<div class="recent-article-info">
+						<a class="article-title" href="/index" title="hexo-theme-butterfly安裝文檔">hexo-theme-butterfly安裝文檔</a>
+						<span class="article-meta">
+							<i class="fa fa-thumb-tack article-meta-icon sticky"></i>
+							<span class="sticky">置顶</span>
+							<span class="article-meta-separator" style="margin-right:6px;">|</span>
+						</span>
+						<time class="article-meta-date">
+							<i class="fa fa-calendar"></i>
+							2019-06-17
+						</time>
+						<span class="article-meta">
+							<span class="article-meta-separator">|</span>
+							<i class="fa fa-inbox article-meta-icon"></i>
+							<a class="article-meta-categories" href="/index">Hexo</a>
+						</span>
+						<div class="content">Butterfly已经升级到V2.1.0 如果升级到hexo 4.2.0 ，会出现报错Error: Cannot find module ‘cheerio’请在博客根目录安装cheerionpm install cheeri ...</div>
+					</div>
+				</div>
+				<div class="recent-article-item">
+					<div class="recent-article-cover left-radius">
+						<a href="/index" title="添加Windows Terminal到鼠标右键菜单">
+							<img class="article-bg" src="/static/image/article-bg2.jpg">
+						</a>
+					</div>
+					<div class="recent-article-info">
+						<a class="article-title" href="/index" title="添加Windows Terminal到鼠标右键菜单">添加Windows Terminal到鼠标右键菜单</a>
+						<time class="article-meta-date">
+							<i class="fa fa-calendar"></i>
+							2019-11-11
+						</time>
+						<span class="article-meta">
+							<span class="article-meta-separator">|</span>
+							<i class="fa fa-inbox article-meta-icon"></i>
+							<a class="article-meta-categories" href="/index">教程</a>
+						</span>
+						<div class="content">Windows上有很多命令行程序，例如CMD和PowerShell。微软在Build 2019上推出了一款面向Windows10的命令行程序，这款程序集合了Windows上的PowerShell、CMD以及Windows Subsystem for Linux于一身，解决了不少惹人吐槽的毛病，甚至被 ...</div>
+					</div>
+				</div>
+				<div class="recent-article-item">
+					<div class="recent-article-cover left-radius">
+						<a href="/index" title="hexo-theme-butterfly安裝文檔">
+							<img class="article-bg" src="/static/image/article-bg1.jpg">
+						</a>
+					</div>
+					<div class="recent-article-info">
+						<a class="article-title" href="/index" title="hexo-theme-butterfly安裝文檔">hexo-theme-butterfly安裝文檔</a>
+						<span class="article-meta">
+							<i class="fa fa-thumb-tack article-meta-icon sticky"></i>
+							<span class="sticky">置顶</span>
+							<span class="article-meta-separator" style="margin-right:6px;">|</span>
+						</span>
+						<time class="article-meta-date">
+							<i class="fa fa-calendar"></i>
+							2019-06-17
+						</time>
+						<span class="article-meta">
+							<span class="article-meta-separator">|</span>
+							<i class="fa fa-inbox article-meta-icon"></i>
+							<a class="article-meta-categories" href="/index">Hexo</a>
+						</span>
+						<div class="content">Butterfly已经升级到V2.1.0 如果升级到hexo 4.2.0 ，会出现报错Error: Cannot find module ‘cheerio’请在博客根目录安装cheerionpm install cheeri ...</div>
+					</div>
+				</div>
+				<div class="recent-article-item">
+					<div class="recent-article-cover left-radius">
+						<a href="/index" title="添加Windows Terminal到鼠标右键菜单">
+							<img class="article-bg" src="/static/image/article-bg2.jpg">
+						</a>
+					</div>
+					<div class="recent-article-info">
+						<a class="article-title" href="/index" title="添加Windows Terminal到鼠标右键菜单">添加Windows Terminal到鼠标右键菜单</a>
+						<time class="article-meta-date">
+							<i class="fa fa-calendar"></i>
+							2019-11-11
+						</time>
+						<span class="article-meta">
+							<span class="article-meta-separator">|</span>
+							<i class="fa fa-inbox article-meta-icon"></i>
+							<a class="article-meta-categories" href="/index">教程</a>
+						</span>
+						<div class="content">Windows上有很多命令行程序，例如CMD和PowerShell。微软在Build 2019上推出了一款面向Windows10的命令行程序，这款程序集合了Windows上的PowerShell、CMD以及Windows Subsystem for Linux于一身，解决了不少惹人吐槽的毛病，甚至被 ...</div>
+					</div>
+				</div>
+				<div class="recent-article-item">
+					<div class="recent-article-cover left-radius">
+						<a href="/index" title="hexo-theme-butterfly安裝文檔">
+							<img class="article-bg" src="/static/image/article-bg1.jpg">
+						</a>
+					</div>
+					<div class="recent-article-info">
+						<a class="article-title" href="/index" title="hexo-theme-butterfly安裝文檔">hexo-theme-butterfly安裝文檔</a>
+						<span class="article-meta">
+							<i class="fa fa-thumb-tack article-meta-icon sticky"></i>
+							<span class="sticky">置顶</span>
+							<span class="article-meta-separator" style="margin-right:6px;">|</span>
+						</span>
+						<time class="article-meta-date">
+							<i class="fa fa-calendar"></i>
+							2019-06-17
+						</time>
+						<span class="article-meta">
+							<span class="article-meta-separator">|</span>
+							<i class="fa fa-inbox article-meta-icon"></i>
+							<a class="article-meta-categories" href="/index">Hexo</a>
+						</span>
+						<div class="content">Butterfly已经升级到V2.1.0 如果升级到hexo 4.2.0 ，会出现报错Error: Cannot find module ‘cheerio’请在博客根目录安装cheerionpm install cheeri ...</div>
+					</div>
+				</div>
+				<div class="recent-article-item">
+					<div class="recent-article-cover left-radius">
+						<a href="/index" title="添加Windows Terminal到鼠标右键菜单">
+							<img class="article-bg" src="/static/image/article-bg2.jpg">
+						</a>
+					</div>
+					<div class="recent-article-info">
+						<a class="article-title" href="/index" title="添加Windows Terminal到鼠标右键菜单">添加Windows Terminal到鼠标右键菜单</a>
+						<time class="article-meta-date">
+							<i class="fa fa-calendar"></i>
+							2019-11-11
+						</time>
+						<span class="article-meta">
+							<span class="article-meta-separator">|</span>
+							<i class="fa fa-inbox article-meta-icon"></i>
+							<a class="article-meta-categories" href="/index">教程</a>
+						</span>
+						<div class="content">Windows上有很多命令行程序，例如CMD和PowerShell。微软在Build 2019上推出了一款面向Windows10的命令行程序，这款程序集合了Windows上的PowerShell、CMD以及Windows Subsystem for Linux于一身，解决了不少惹人吐槽的毛病，甚至被 ...</div>
+					</div>
+				</div>
+				<div class="pagination">
+					<ul class="pager">
+					  <li class="previous"><a href="javascript:void(0)"><i class="fa fa-fw fa-chevron-left"></i></a></li>
+					  <li><a href="javascript:void(0)">1</a></li>
+					  <li class="active"><a href="javascript:void(0)">2</a></li>
+					  <li><a href="javascript:void(0)">3</a></li>
+					  <li><a href="javascript:void(0)">4</a></li>
+					  <li><a href="javascript:void(0)">5</a></li>
+					  <li class="next"><a href="javascript:void(0)"><i class="fa fa-fw fa-chevron-right"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<div th:replace="aside-info :: aside-info"></div>
+		</div>
+	</div>
+	<!-- 引入共有底部 -->
+	<div th:replace="footer :: footer"></div>
+	<!-- 引入回到顶部按钮 -->
+	<div th:replace="rightside :: rightside"></div>
+</div>
+<link rel="stylesheet" href="/static/css/index.css">
+<script src="/static/js/index.js"></script>
+</body>
+</html>

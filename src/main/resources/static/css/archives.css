@@ -1,0 +1,191 @@
+body{
+	position: relative;
+    min-height: 100%;
+    overflow-x:hidden;
+    background: #fff;
+    color: #4c4948;
+    font-size: 14px;
+    font-family: Lato,Helvetica Neue For Number,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,"Microsoft JhengHei","MicrMicrosoft YaHei",Helvetica Neue,Helvetica,Arial,sans-serif;
+    line-height: 2;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: #49b1f5;
+}
+a{
+	color: #99a9bf;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    -ms-transition: all .2s;
+    transition: all .2s;
+}
+*{
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.layout-page{
+	display:flex;width:1200px;-webkit-box-align:start;align-items:flex-start;max-width:1200px;margin:0px auto;padding:0px 15px;
+}
+.archives{
+	margin-top:20px;
+	width:75%;
+	border-radius:8px;
+	background:#fff;
+	-webkit-box-shadow: 0 4px 8px 6px rgba(7,17,27,.06);
+    box-shadow: 0 4px 8px 6px rgba(7,17,27,.06);
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+    padding:60px;
+}
+.archives:hover{
+	box-shadow:0px 4px 12px 12px rgba(7, 17, 27, .15);
+}
+.article-sort-title{
+	position:relative;
+	padding-bottom:24px;
+	padding-left:20px;
+	font-size:24px;
+	line-height:1;
+}
+.article-sort-title:after{
+	position:absolute;
+	bottom:0;
+	left:0;
+	z-index:0;
+	width:2px;
+	height:26px;
+	background:#a4d8fa;
+	content:"";
+}
+.article-sort{
+	padding-left:20px;
+	border-left:2px solid #a4d8fa;
+}
+.article-sort-item{
+	position:relative;
+	margin:0 0 20px 10px;
+	-webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+.article-sort-item.year{
+	font-size:20px;
+}
+.article-sort-title:before{
+	position:absolute;
+	top:5px;
+	left:-9px;
+	z-index:1;
+	width:20px;
+	height:20px;
+	border:5px solid #49b1f5;
+	border-radius:10px;
+	content:"";
+	line-height:20px;
+	-webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+.article-sort-item:hover:before{
+	border-color:#ff7242;
+}
+.article-sort-item:before{
+	position:absolute;
+	top:36px;
+	left:-37px;
+	width:12px;
+	height:12px;
+	border:3px solid #49b1f5;
+	border-radius:6px;
+	background:white;
+	content:"";
+	line-height:6px;
+	-webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+.article-sort-item.year:before{
+	top:14px;
+	border-color:#ff7242;
+}
+.article-sort-img{
+	display:inline-block;
+	overflow:hidden;
+	width:80px;
+	height:80px;
+}
+.article-sort-item-img img{
+	padding:0;
+	width:100%;
+	height:100%;
+	-webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -o-transition: all .6s;
+    -ms-transition: all .6s;
+    transition: all .6s;
+    object-fit: cover;
+}
+.article-sort-article{
+	position:absolute;
+	top:0;
+	display:inline-block;
+	margin-left:20px;
+}
+.article-sort-item-article{
+	text-decoration:none;
+	cursor:pointer;
+}
+.article-sort-img:hover img{
+	transform:scale(1.1);
+}
+.article-sort-item-article:hover{
+	text-decoration:none;
+}
+.article-sort-item-article .article-sort-item-title:hover{
+	color:#49b1f5;
+	-webkit-transform:translateX(20px);-moz-transform:translateX(20px);-o-transform:translateX(20px);-ms-transform:translateX(20px);transform:translateX(20px)
+}
+.article-sort-item-time{
+	padding-left:8px;
+	color:#99a9bf;
+	font-size:14px;
+}
+.article-sort-item-title{
+	display:-webkit-box;
+	overflow:hidden;
+	height:60px;
+	color:#4c4948;
+	font-size:15px;
+	-webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.pagination{
+	margin-top:20px;
+	text-align:center;
+}
+.pager > li.active > a, .pager > li.active > span, .pager > li.active > a:hover, .pager > li.active > span:hover{
+	background-color:#00c4b6;
+	border-color:#00c4b6;
+}
+.pager > li > a, .pager > li > span{
+	border:none;
+}
