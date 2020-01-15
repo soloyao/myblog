@@ -26,7 +26,118 @@
 	<div style="padding-top:58px;">
 		<div class="row layout-page">
 			<div class="messageboard">
-				
+				<h1>留言板</h1>
+				<div class="messageboard-container">
+					<p>
+						有什么想说的？
+						<br>
+						有什么想问的？
+						<br>
+						有什么想吐槽的？
+						<br>
+						可以在下面留言...
+						<br>
+					</p>
+				</div>
+				<hr></hr>
+				<div id="article-comment">
+					<div class="comment-headling">
+						<i class="fa fa-comments fa-fw"></i>
+						<span>评论</span>
+					</div>
+					<div class="vcomment v" id="vcomment">
+						<div class="vwrap">
+							<div class="vheader item3">
+								<input name="nick" placeholder="NickName" class="vnick vinput" type="text">
+								<input name="mail" placeholder="E-Mail" class="vmail vinput" type="email">
+								<input name="link" placeholder="Website(http://)" class="vlink vinput" type="text">
+							</div>
+							<div class="vedit">
+								<textarea id="veditor" class="veditor vinput" placeholder="记得留下你的昵称和邮箱....可以快速收到回复"></textarea>
+							</div>
+							<div class="vcontrol">
+								<div class="text-right">
+									<button class="vsubmit vbtn">Reply</button>
+								</div>
+							</div>
+						</div>
+						<div class="vinfo" style="display:block;">
+							<div class="vcount">
+								<span class="vnum">267</span> Comments
+							</div>
+						</div>
+						<div class="vlist">
+							<div class="vcard">
+								<img class="vimg" src="/static/image/usericon.jpg">
+								<div class="vh">
+									<div class="vhead">
+										<span class="vnick">Dream</span>
+									</div>
+									<div class="vmeta">
+										<span class="vtime">2019-01-20 12:01</span>
+										<span class="vat">Reply</span>
+									</div>
+									<div class="vcontent">
+										<p>test</p>
+									</div>
+									<div class="vquote">
+										<div class="vcard">
+											<img class="vimg" src="/static/image/usericon.jpg">
+											<div class="vh">
+												<div class="vhead">
+													<span class="vnick">Dream</span>
+												</div>
+												<div class="vmeta">
+													<span class="vtime">2019-01-20 12:01</span>
+													<span class="vat">Reply</span>
+												</div>
+												<div class="vcontent">
+													<p>
+														<a class="at">@Dream</a>
+														 , 111
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="vcard">
+											<img class="vimg" src="/static/image/usericon.jpg">
+											<div class="vh">
+												<div class="vhead">
+													<span class="vnick">Dream</span>
+												</div>
+												<div class="vmeta">
+													<span class="vtime">2019-01-20 12:01</span>
+													<span class="vat">Reply</span>
+												</div>
+												<div class="vcontent">
+													<p>
+														<a class="at">@Dream</a>
+														 , 测试
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="vcard">
+								<img class="vimg" src="/static/image/usericon.jpg">
+								<div class="vh">
+									<div class="vhead">
+										<span class="vnick">Dream</span>
+									</div>
+									<div class="vmeta">
+										<span class="vtime">2019-01-20 12:01</span>
+										<span class="vat">Reply</span>
+									</div>
+									<div class="vcontent">
+										<p>test</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div th:replace="aside-info :: aside-info"></div>
 		</div>

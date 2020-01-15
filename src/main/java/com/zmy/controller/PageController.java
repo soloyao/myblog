@@ -43,6 +43,12 @@ public class PageController {
 		return mav;
 	}
 	
+	@GetMapping("/friendLink")
+	public ModelAndView friendLink() {
+		ModelAndView mav = new ModelAndView("friendLink");
+		return mav;
+	}
+	
 	@GetMapping("/categories")
 	public ModelAndView categories() {
 		ModelAndView mav = new ModelAndView("categories");

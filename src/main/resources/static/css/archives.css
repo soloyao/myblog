@@ -43,7 +43,7 @@ a{
     -o-transition: all .3s;
     -ms-transition: all .3s;
     transition: all .3s;
-    padding:60px;
+    padding:40px 44px 44px;
 }
 .archives:hover{
 	box-shadow:0px 4px 12px 12px rgba(7, 17, 27, .15);
