@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh_CN" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+<meta charset="UTF-8">
+<title>归档</title>
+<link rel="stylesheet" href="/static/css/zui.css">
+<link rel="stylesheet" href="/static/css/footer.css">
+<link rel="stylesheet" href="/static/css/header.css">
+<link rel="stylesheet" href="/static/css/aside-info.css">
+<link rel="stylesheet" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/zui.js"></script>
+<script src="/static/js/vue.min.js"></script>
+<script src="/static/js/myzui.js"></script>
+<script src="/static/js/axios.min.js"></script>
+<script src="/static/js/heartclick.js"></script>
+<script src="/static/js/starback.js"></script>
+<script src="/static/js/cat.js"></script>
+<script src="/static/js/common.js"></script>
+</head>
+<body>
+<div id="app">
+	<!-- 引入共有头部 -->
+	<div th:replace="header :: header"></div>
+	<div style="padding-top:58px;">
+		<div class="row layout-page">
+			<div class="messageboard">
+				
+			</div>
+			<div th:replace="aside-info :: aside-info"></div>
+		</div>
+	</div>
+	<!-- 引入共有底部 -->
+	<div th:replace="footer :: footer"></div>
+	<!-- 引入回到顶部按钮 -->
+	<div th:replace="rightside :: rightside"></div>
+</div>
+<link rel="stylesheet" href="/static/css/messageboard.css">
+<script src="/static/js/messageboard.js"></script>
+</body>
+</html>

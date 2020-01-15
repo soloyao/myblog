@@ -37,6 +37,12 @@ public class PageController {
 		return mav;
 	}
 	
+	@GetMapping("/messageboard")
+	public ModelAndView messageboard() {
+		ModelAndView mav = new ModelAndView("messageboard");
+		return mav;
+	}
+	
 	@GetMapping("/categories")
 	public ModelAndView categories() {
 		ModelAndView mav = new ModelAndView("categories");
