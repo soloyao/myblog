@@ -2,6 +2,10 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:http="http://www.w3.org/1999/xhtml">
 <!-- 所有页面共有旁边信息栏 -->
 <div th:fragment="aside-info" style="width:25%;" id="aside-content">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+	<link rel="stylesheet" href="/static/css/aside-info.css">
 	<div class="card-widget card-info">
 					<div class="card-content">
 						<div class="card-info-avatar is-center">
@@ -55,6 +59,11 @@
 							<span>公告</span>
 						</div>
 						<div class="announcement-content">来了，就不要急着走...</div>
+					</div>
+				</div>
+				<div class="card-widget card-player">
+					<div class="aplayer" style="width:277px;margin:0px;" data-autoplay="true" data-id="000Sp0Bz4JXH0o" data-server="tencent" data-type="artist">
+						<!-- 000Sp0Bz4JXH0o 五月天 -->
 					</div>
 				</div>
 				<div class="card-widget card-recent-article">

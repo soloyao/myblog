@@ -618,3 +618,17 @@ main{
 	cursor:pointer;
 	display:inline-block;
 }
+.v .vpage{
+	text-align:center;
+}
+.v .vmore{
+	padding:6px 20px;
+	border-color:white;
+	background:#49b1f5;
+	color:white;
+	font-size:14px;
+	margin:20px 0;
+}
+.v .vmore:hover{
+	background:rgb(127,225,218);
+}

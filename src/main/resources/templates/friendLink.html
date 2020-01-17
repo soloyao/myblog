@@ -3,11 +3,8 @@
       xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
 <head>
 <meta charset="UTF-8">
-<title>归档</title>
+<title>友链</title>
 <link rel="stylesheet" href="/static/css/zui.css">
-<link rel="stylesheet" href="/static/css/footer.css">
-<link rel="stylesheet" href="/static/css/header.css">
-<link rel="stylesheet" href="/static/css/aside-info.css">
 <link rel="stylesheet" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">
 <script src="/static/js/jquery.min.js"></script>
 <script src="/static/js/zui.js"></script>
@@ -37,6 +34,119 @@
 							</a>
 						</li>
 					</ul>
+				</div>
+				<hr>
+				<div>
+					<h2>我的Blog资料</h2>
+					<ul>
+						<li>Blog 名字;  DreamZ</li>
+						<li>Blog 地址:  http://127.0.0.1:8823/</li>
+						<li>Blog 头像:  http://127.0.0.1:8823/static/image/usericon.jpg</li>
+						<li>Blog 简介:  今日事,今日毕</li>
+					</ul>
+				</div>
+				<hr>
+				<div class="comment-int">
+					<p class="comment-word">定期清理无效的连接,如果需要交换友链,请留言</p>
+					<hr>
+					<div id="article-comment">
+					<div class="comment-headling">
+						<i class="fa fa-comments fa-fw"></i>
+						<span>评论</span>
+					</div>
+					<div class="vcomment v" id="vcomment">
+						<div class="vwrap">
+							<div class="vheader item3">
+								<input name="nick" placeholder="NickName" class="vnick vinput" type="text">
+								<input name="mail" placeholder="E-Mail" class="vmail vinput" type="email">
+								<input name="link" placeholder="Website(http://)" class="vlink vinput" type="text">
+							</div>
+							<div class="vedit">
+								<textarea id="veditor" class="veditor vinput" placeholder="记得留下你的昵称和邮箱....可以快速收到回复"></textarea>
+							</div>
+							<div class="vcontrol">
+								<div class="text-right">
+									<button class="vsubmit vbtn">Reply</button>
+								</div>
+							</div>
+						</div>
+						<div class="vinfo" style="display:block;">
+							<div class="vcount">
+								<span class="vnum">267</span> Comments
+							</div>
+						</div>
+						<div class="vlist">
+							<div class="vcard">
+								<img class="vimg" src="/static/image/usericon.jpg">
+								<div class="vh">
+									<div class="vhead">
+										<span class="vnick">Dream</span>
+									</div>
+									<div class="vmeta">
+										<span class="vtime">2019-01-20 12:01</span>
+										<span class="vat">Reply</span>
+									</div>
+									<div class="vcontent">
+										<p>test</p>
+									</div>
+									<div class="vquote">
+										<div class="vcard">
+											<img class="vimg" src="/static/image/usericon.jpg">
+											<div class="vh">
+												<div class="vhead">
+													<span class="vnick">Dream</span>
+												</div>
+												<div class="vmeta">
+													<span class="vtime">2019-01-20 12:01</span>
+													<span class="vat">Reply</span>
+												</div>
+												<div class="vcontent">
+													<p>
+														<a class="at">@Dream</a>
+														 , 111
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="vcard">
+											<img class="vimg" src="/static/image/usericon.jpg">
+											<div class="vh">
+												<div class="vhead">
+													<span class="vnick">Dream</span>
+												</div>
+												<div class="vmeta">
+													<span class="vtime">2019-01-20 12:01</span>
+													<span class="vat">Reply</span>
+												</div>
+												<div class="vcontent">
+													<p>
+														<a class="at">@Dream</a>
+														 , 测试
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="vcard">
+								<img class="vimg" src="/static/image/usericon.jpg">
+								<div class="vh">
+									<div class="vhead">
+										<span class="vnick">Dream</span>
+									</div>
+									<div class="vmeta">
+										<span class="vtime">2019-01-20 12:01</span>
+										<span class="vat">Reply</span>
+									</div>
+									<div class="vcontent">
+										<p>test</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 				</div>
 			</div>
 			<div th:replace="aside-info :: aside-info"></div>
