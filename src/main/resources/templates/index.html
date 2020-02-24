@@ -15,6 +15,7 @@
 <script src="/static/js/starback.js"></script>
 <script src="/static/js/cat.js"></script>
 <script src="/static/js/common.js"></script>
+<script src="/static/js/component-pager.js"></script>
 </head>
 <body>
 <div id="app">
@@ -23,7 +24,39 @@
 	<div style="padding-top:58px;">
 		<div class="row layout-page">
 			<div class="recent-article" style="width:75%;">
-				<div class="recent-article-item">
+				<template v-if="itemList && itemList.length != 0" v-for="article in itemList">
+					<div class="recent-article-item">
+						<div class="recent-article-cover left-radius">
+							<a :href="'/article/' + article.articleId" :title="article.articleTitle">
+								<img class="article-bg" src="/static/image/article-bg1.jpg">
+							</a>
+						</div>
+						<div class="recent-article-info">
+							<a class="article-title" :href="'/article/' + article.articleId" :title="article.articleTitle">{{article.articleTitle}}</a>
+							<span class="article-meta">
+								<i class="fa fa-thumb-tack article-meta-icon sticky"></i>
+								<span class="sticky">置顶</span>
+								<span class="article-meta-separator" style="margin-right:6px;">|</span>
+							</span>
+							<time class="article-meta-date">
+								<i class="fa fa-calendar"></i>
+								{{article.publishDate}}
+							</time>
+							<span class="article-meta">
+								<span class="article-meta-separator">|</span>
+								<i class="fa fa-inbox article-meta-icon"></i>
+								<a class="article-meta-categories" :href="'/article/' + article.articleId">{{article.articleCategories}}</a>
+							</span>
+							<div class="content">{{article.articleTabloid}}</div>
+						</div>
+					</div>
+				</template>
+				<template v-if="itemList && itemList.length == 0">
+					<div style="text-align:center;">
+						暂无数据
+					</div>
+				</template>
+				<!-- <div class="recent-article-item">
 					<div class="recent-article-cover left-radius">
 						<a href="/index" title="hexo-theme-butterfly安裝文檔">
 							<img class="article-bg" src="/static/image/article-bg1.jpg">
@@ -157,8 +190,11 @@
 						</span>
 						<div class="content">Windows上有很多命令行程序，例如CMD和PowerShell。微软在Build 2019上推出了一款面向Windows10的命令行程序，这款程序集合了Windows上的PowerShell、CMD以及Windows Subsystem for Linux于一身，解决了不少惹人吐槽的毛病，甚至被 ...</div>
 					</div>
-				</div>
-				<div class="pagination">
+				</div> -->
+				<!-- 分页开始 -->
+				<component-pager v-bind.sync="pagination" v-on:list="initArticle"></component-pager>
+				<!-- 分页结束 -->
+				<!-- <div class="pagination">
 					<ul class="pager">
 					  <li class="previous"><a href="javascript:void(0)"><i class="fa fa-fw fa-chevron-left"></i></a></li>
 					  <li><a href="javascript:void(0)">1</a></li>
@@ -168,7 +204,7 @@
 					  <li><a href="javascript:void(0)">5</a></li>
 					  <li class="next"><a href="javascript:void(0)"><i class="fa fa-fw fa-chevron-right"></i></a></li>
 					</ul>
-				</div>
+				</div> -->
 			</div>
 			<div th:replace="aside-info :: aside-info"></div>
 		</div>
