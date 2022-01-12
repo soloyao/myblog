@@ -6,6 +6,11 @@ import org.springframework.boot.web.servlet.ErrorPageRegistry;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
+/**
+ * 错误配置类
+ * @author kingdee
+ *
+ */
 @Component
 public class ErrorConfig implements ErrorPageRegistrar {
 
